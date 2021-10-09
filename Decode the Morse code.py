@@ -14,4 +14,5 @@ def decodeMorse(morse_code):
     # ToDo: Accept dots, dashes and spaces, return human-readable message
     return ('').join(MORSE_CODE[x] for x in morse_code.replace('   ',' | ').split(' ')).strip()
 
+
 print(decodeMorse('      ...---... -.-.--   - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-  '))
