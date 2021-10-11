@@ -15,8 +15,7 @@ cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flo
 """
 
 def cakes(recipe, available):
-    cross = [available[x] // recipe[x] for x in recipe if x in available]
-    return 0 if len(cross) != len(recipe) else min(cross) 
+    return min([available.get(x, 0) // recipe[x] for x in recipe]) 
 
 print(cakes({'crumbles': 41, 'pears': 51, 'nuts': 5}, {'cream': 2426, 'flour': 6799, 'nuts': 2600, 'apples': 5299, 'crumbles': 8750, 'chocolate': 9844, 'butter': 4892, 'milk': 4347, 'pears': 747, 'oil': 519}))
 
